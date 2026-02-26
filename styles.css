@@ -240,13 +240,6 @@ input[type="radio"]:checked+.tabs__label {
     /* Центрируем картинку */
 }
 
-/* Стили для изображения в основной части */
-/* .main__image img {
-    max-width: 100%;
-    height: auto;
-    display: block;
-    margin: 0 auto;
-} */
 
 .nav__divider--left {
     display: none;
@@ -259,6 +252,14 @@ input[type="radio"]:checked+.tabs__label {
 @media (min-width: 321px) and (max-width: 768px) {
     br {
         display: inline;
+    }
+
+    .menu__nav {
+        overflow-x: auto;
+        /* Скрываем скроллбар */
+        scrollbar-width: none;
+        /* Firefox */
+        -ms-overflow-style: none;
     }
 
     .header__center {
@@ -282,11 +283,7 @@ input[type="radio"]:checked+.tabs__label {
 
     .main__content {
         display: grid;
-        /* flex-direction: row; */
-        /* align-items: stretch; */
-        /* width: 100%; */
         grid-template-columns: 1fr 1fr;
-
         margin-bottom: 2.5rem;
         padding: 0 2.125rem;
     }
@@ -356,7 +353,6 @@ input[type="radio"]:checked+.tabs__label {
 
     .main__tabs {
         padding: 0 2.125rem 2rem;
-        /* flex-wrap: nowrap; */
         flex-wrap: wrap;
     }
 
