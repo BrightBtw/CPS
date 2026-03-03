@@ -163,8 +163,12 @@ br {
 }
 
 
+.tabs {
+    display: flex;
+}
+
 /* Меню по разделам */
-.main__tabs {
+.tabs__group {
     display: flex;
     flex-wrap: nowrap;
     align-items: center;
@@ -351,9 +355,16 @@ input[type="radio"]:checked+.tabs__label {
         margin-right: 1.25rem;
     }
 
-    .main__tabs {
+    .tabs__group {
         padding: 0 2.125rem 2rem;
-        flex-wrap: wrap;
+        display: grid;
+        grid-template-columns: repeat(6, auto);
+        white-space: nowrap;
+    }
+
+    .tabs__label:last-of-type {
+        grid-column: 1 / -1;
+        justify-self: start;
     }
 
     /* скрытие навигации */
